@@ -1,0 +1,5 @@
+_assetic:
+    resource: .
+    type: assetic
+_app:
+    resource: /Users/Quentin/Sites/PHP_Avance_SymfoTweet/app/config/routing_dev.yml
