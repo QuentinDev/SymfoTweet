@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             //Tweets Bundle
             new Symfotweet\TweetBundle\SymfotweetTweetBundle(),
+            //UserBundle
             new Symfotweet\UserBundle\SymfotweetUserBundle(),
             //FosUserBundle
             new FOS\UserBundle\FOSUserBundle(),

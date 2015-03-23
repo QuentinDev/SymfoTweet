@@ -290,7 +290,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         not_fos_user_change_password:
 
         // hello_the_world
-        if ($pathinfo === '/helloworld') {
+        if ($pathinfo === '/index') {
             return array (  '_controller' => 'Symfotweet\\TweetBundle\\Controller\\AdvertController::indexAction',  '_route' => 'hello_the_world',);
         }
 
