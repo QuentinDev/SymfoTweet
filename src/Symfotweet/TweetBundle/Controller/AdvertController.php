@@ -1,7 +1,5 @@
 <?php
 
-// src/OC/PlatformBundle/Controller/AdvertController.php
-
 namespace Symfotweet\TweetBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Response;

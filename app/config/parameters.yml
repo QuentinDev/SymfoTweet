@@ -5,10 +5,12 @@ parameters:
     database_port: null
     database_name: symfotweet
     database_user: root
-    database_password: 
+    database_password: null
     mailer_transport: smtp
     mailer_host: 127.0.0.1
     mailer_user: null
     mailer_password: null
     locale: fr
     secret: 62be8f2599af162bd7edeba364965e710
+    twitter_app_id: qlZ9z7KY7FWgbpkzTWau36I6f
+    twitter_app_secret: 16cyTgYw0Icz6knWjIN00luGU786eERinXajJcLPu4NiO2xxZd

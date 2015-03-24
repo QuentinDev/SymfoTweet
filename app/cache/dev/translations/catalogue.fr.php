@@ -181,6 +181,18 @@ L\'équipe.
     'form.new_password' => 'Nouveau mot de passe :',
     'form.new_password_confirmation' => 'Vérification :',
   ),
+  'HWIOAuthBundle' => 
+  array (
+    'header.connecting' => 'Connexion en cours',
+    'header.success' => 'Connexion réussie avec le compte \'%name%\' !',
+    'header.register' => 'S\'inscrire avec le compte \'%name%\'',
+    'header.registration_success' => 'Enregistrement et connexion du compte \'%username%\' réussis !',
+    'connect.confirm.cancel' => 'Annuler',
+    'connect.confirm.submit' => 'Connecter le compte',
+    'connect.confirm.text' => 'Êtes-vous sûr de vouloir connecter votre compte %service% avec votre compte \'%name%\' ?',
+    'connect.registration.cancel' => 'Annuler',
+    'connect.registration.submit' => 'Enregistrer le compte',
+  ),
 ));
 
 

@@ -289,6 +289,38 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
         not_fos_user_change_password:
 
+        if (0 === strpos($pathinfo, '/login')) {
+            // hwi_oauth_connect
+            if (rtrim($pathinfo, '/') === '/login') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'hwi_oauth_connect');
+                }
+
+                return array (  '_controller' => 'HWI\\Bundle\\OAuthBundle\\Controller\\ConnectController::connectAction',  '_route' => 'hwi_oauth_connect',);
+            }
+
+            // hwi_oauth_connect_service
+            if (0 === strpos($pathinfo, '/login/service') && preg_match('#^/login/service/(?P<service>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'hwi_oauth_connect_service')), array (  '_controller' => 'HWI\\Bundle\\OAuthBundle\\Controller\\ConnectController::connectServiceAction',));
+            }
+
+            // hwi_oauth_connect_registration
+            if (0 === strpos($pathinfo, '/login/registration') && preg_match('#^/login/registration/(?P<key>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'hwi_oauth_connect_registration')), array (  '_controller' => 'HWI\\Bundle\\OAuthBundle\\Controller\\ConnectController::registrationAction',));
+            }
+
+            // hwi_oauth_service_redirect
+            if (preg_match('#^/login/(?P<service>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'hwi_oauth_service_redirect')), array (  '_controller' => 'HWI\\Bundle\\OAuthBundle\\Controller\\ConnectController::redirectToServiceAction',));
+            }
+
+            // twitter_login
+            if ($pathinfo === '/login/check-twitter') {
+                return array('_route' => 'twitter_login');
+            }
+
+        }
+
         // hello_the_world
         if ($pathinfo === '/index') {
             return array (  '_controller' => 'Symfotweet\\TweetBundle\\Controller\\AdvertController::indexAction',  '_route' => 'hello_the_world',);

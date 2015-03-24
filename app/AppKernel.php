@@ -22,6 +22,8 @@ class AppKernel extends Kernel
             new Symfotweet\UserBundle\SymfotweetUserBundle(),
             //FosUserBundle
             new FOS\UserBundle\FOSUserBundle(),
+            //HWIOAuthBundle
+            new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
